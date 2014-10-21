@@ -1,0 +1,6 @@
+*.suo
+*.user
+bin
+obj
+_Resharper.*
+csharp/packages/**/*
