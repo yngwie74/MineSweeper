@@ -148,6 +148,7 @@ If Not CBool(InStr("|mxnts|pmxnt|", Left(Request.ServerVariables("SERVER_NAME"),
 * DescuentosTDL\resporte_resultado.asp
 * Farmacia2\Pharmacy_Detalle.asp
 * Farmacia2\Pharmacy_Modificar2.asp
+* Farmacia2\Pharmacy_Particular.asp
 * Farmacia2/Pharmacy_stores_add_mod.asp
 
 Antes:
