@@ -139,9 +139,48 @@ Después:
 If Not CBool(InStr("|mxnts|pmxnt|", Left(Request.ServerVariables("SERVER_NAME"), 5))) Then
 ```
 
+###Queries dependientes del formato de fecha por default en el servidor
+
+* DescuentosTDL\reporte_consulta.asp
+* DescuentosTDL\reporte_listado.asp
+* DescuentosTDL\reporte_general.asp
+* DescuentosTDL\resporte_general.asp
+* DescuentosTDL\resporte_resultado.asp
+* Farmacia2\Pharmacy_Detalle.asp
+* Farmacia2\Pharmacy_Modificar2.asp
+* Farmacia2/Pharmacy_stores_add_mod.asp
+
+Antes:
+
+```vbs
+DiaIni = mid(FechaIni,1,2)
+MesIni = mid(FechaIni,4,2)
+AnioIni = mid(FechaIni,7,4)
+IniArmada = AnioIni & "-" & MesIni & "-" & DiaIni
+DiaFin = mid(FechaFin,1,2)
+MesFin = mid(FechaFin,4,2)
+AnioFin = mid(FechaFin,7,4)
+FinArmada = AnioFin & "-" & MesFin & "-" & DiaFin
+.
+.
+.
+sqlNoTarjetas = sqlNoTarjetas &"  and  discount_date >= '"&Trim(IniArmada)& "' and discount_date <= '"&Trim(FinArmada)&"'"
+```
+
+Después:
+
+```vbs
+IniArmada = gf_FormatDateMDY(FechaIni)
+FinArmada = gf_FormatDateMDY(FechaFin)
+.
+.
+.
+sqlNoTarjetas = sqlNoTarjetas & " and discount_date >= " & IniArmada & " and discount_date <= " & FinArmada 
+```
+
+
 ##Falta probar:
 * Catalogos:
     * aplicaciones (logs)
-        * "Alta de nueva aplicación"
         * "Carga de usuarios en lote (Acceso a aplicaciones)"
 
