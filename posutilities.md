@@ -153,6 +153,7 @@ If Not CBool(InStr("|mxnts|pmxnt|", Left(Request.ServerVariables("SERVER_NAME"),
 * Farmacia2\Pharmacy_Modificar2.asp
 * Farmacia2\Pharmacy_Particular.asp
 * Farmacia2/Pharmacy_stores_add_mod.asp
+* Password\modificar_password.asp
 
 Antes:
 
