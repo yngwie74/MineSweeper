@@ -29,6 +29,8 @@ Response.Write("<FORM name=forma action=""" & GetApplicationPath() & """ method=
 ```
 
 ###Chequeo de usuario firmado
+* BatchProdLogs\UploadFiles\upload_appusers_1.asp
+* BatchProdLogs\UploadFiles\upload_appusers_2.asp
 * HabitosConsumo\Rep_CompraFacil\Rep_Deptos.asp
 * HabitosConsumo\Rep_CompraFacil\Rep_DetArticulos.asp
 * HabitosConsumo\Rep_CompraFacil\Rep_TotPorArticulo.asp
@@ -61,6 +63,7 @@ Response.Write("<FORM name=forma action=""" & GetApplicationPath() & """ method=
 * HabitosConsumo\Rep_TarjsWM\Rep_VisitasTarjetaX.asp
 * HabitosConsumo\Rep_TarjsWM\Rep_VisitsFreeFilter.asp
 * ItemRestriction\Extras\CargaArticulos.asp
+* Password\password_in.asp
 
 Antes:
 ```vbs
